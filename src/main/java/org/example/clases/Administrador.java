@@ -1,4 +1,55 @@
 package org.example.clases;
 
 public class Administrador {
+    private String nombres;
+    private Double salario;
+    private String correo;
+    private Boolean jornada;
+
+    public Administrador() {
+    }
+
+    public Administrador(String nombres, Double salario, String correo, Boolean jornada) {
+        this.nombres = nombres;
+        this.salario = salario;
+        this.correo = correo;
+        this.jornada = jornada = true;
+    }
+
+    public String getNombres() {
+        return nombres;
+    }
+
+    public void setNombres(String nombres) {//minimo 25 letras
+        this.nombres = nombres;
+    }
+
+    public Double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(Double salario) {
+        if (salario<0){
+            System.out.println("El salario no piuede ser negativo ");
+        }else {
+        this.salario = salario;
+        }
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public Boolean getJornada() {
+        return jornada;
+    }
+
+    public void setJornada(Boolean jornada) {
+        this.jornada = jornada;
+    }
 }
+
